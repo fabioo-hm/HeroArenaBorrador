@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERO ARENA - Home</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cal+Sans&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('') no-repeat center center/cover;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #000000 0%, #1b1b1b 100%);
+      padding: 0 30px;
+      height: 125px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    }
+
+    .logo img {
+      width: 245px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #000);
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .otrosbotones {
+      display: flex;
+      gap: 80px;
+    }
+
+    .otrosbotones a {
+      font-family: "Cal Sans", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      text-decoration: none;
+      color: #8f8f8f;
+      font-size: 37px;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    .otrosbotones a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: #690202;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    .otrosbotones a:hover,
+    .otrosbotones a.active {
+      color: #ececec;
+    }
+
+    .otrosbotones a:hover::after,
+    .otrosbotones a.active::after {
+      width: 100%;
+    }
+
+    .arena-btn {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #dab904, #ceb007);
+      color: #000000;
+      padding: 35px 65px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 40px;
+      text-decoration: none;
+      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+      box-shadow: 0 0 10px rgba(66, 66, 66, 0.6), 0 0 20px rgba(65, 65, 65, 0.6);
+      transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+    }
+
+    .arena-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(58, 57, 57, 0.9), 0 0 30px rgba(39, 39, 39, 0.9);
+      color: #000;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    .hero button {
+      padding: 15px 35px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #810202, #000000);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255,0,0,0.6);
+      transition: transform 0.2s ease;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+
+    .hero button::before {
+      content: '⚔️ ⚔️';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 30px;
+      animation: clash 0.6s ease forwards;
+    }
+
+    .hero button:hover::before {
+      animation: clash 0.6s ease forwards;
+    }
+
+    @keyframes clash {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+    }
+    .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    }
+
+    .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+    z-index: 2;
+    }
+
+    .navbar {
+    position: relative; /* stays above video & overlay */
+    z-index: 10;
+    }
+
+    .hero {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 0px 0px;
+        img{
+            width: 580px;
+
+            filter: drop-shadow(0 0 10px #000);
+        }
+    }
+    .hero {
+    max-width: 1000px;
+    margin: 2rem auto;
+    line-height: 1.6;
+    p{
+        font-size: 20px;
+
+    }
+    }
+
+    .hero h2 {
+    color: #00d2ff;
+    font-size: 2rem;
+    }
+
+    .hero h3 {
+    color: #ff4757;
+    margin-top: 2rem;
+    }
+
+    .hero ul {
+    list-style-type: none;
+    padding-left: 0;
+    }
+
+    .hero li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #00d2ff;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="img/logo2.png" alt="logo">
+    </div>
+    <div class="menu">
+      <div class="otrosbotones">
+        <a href="index.html" class="active">HOME</a>
+        <a href="marvel.html">MARVEL COMICS</a>
+        <a href="#">DC COMICS</a>
+      </div>
+      <a href="#" class="arena-btn">ARENA</a>
+    </div>
+  </nav>
+
+  <!-- VIDEO BACKGROUND -->
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="img/vecteezy_space-galaxy-and-nebula_11128600.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <!-- HERO HOME -->
+  <section class="hero">
+    <img src="img/logo6.png" alt="Hero Arena Logo" class="hero-logo">
+    <p>
+      <strong>HERO ARENA</strong> es una experiencia épica de combate entre superhéroes donde los universos de <strong>Marvel</strong> y <strong>DC</strong> colisionan. Aquí no hay equipos, solo tú, tu héroe favorito, y el enemigo. Cada batalla es un duelo individual lleno de tensión, estrategia y poder. ¿Tienes lo que se necesita para ganar en la arena? 
+    </p>
+
+    <p>
+      ¡Explora las secciones de <strong>Marvel</strong> y <strong>DC</strong>, elige tu campeón y entra al combate!
+    </p>
+    <h1>¡Lucha Como un Héroe!</h1>
+    <button>¡A LA ARENA!</button>
+  </section>
+</body>
+
