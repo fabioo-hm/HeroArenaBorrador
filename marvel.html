@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Marvel | HERO ARENA</title>
   <link rel="stylesheet" href="marvel.css">
+  <script src="hero_card.js" defer></script>
 </head>
 <body>
   <nav class="navbar">
@@ -28,140 +29,41 @@
       <input type="text" placeholder="Busca tu héroe..." class="search-bar">
     </section>
     <section class="card-container">
-
-  <div class="card">
-    <div class="card-inner">
-      
-      <!-- Cara frontal -->
-      <div class="card-front">
-        <img src="img/robin.webp" alt="Batman">
-        <h3>Batman</h3>
-        <button class="info-btn">Info</button>
-      </div>
-
-      <!-- Cara trasera -->
-        <div class="card-back">
-            <h2>Bruce Wayne</h2>
-            <p><strong>Alias:</strong> Batman</p>
-            <p><strong>Descripción:</strong> El Caballero de la Noche, conocido como un vigilante enmascarado que protege Gotham con inteligencia, habilidad y tecnología, impulsado por la tragedia de su pasado.</p>
-            <p><strong>Trajes:</strong> Traje clásico, armadura táctica, traje sigiloso</p>
-            <button class="close-btn">Cerrar</button>
-        </div>
-
-        </div>
-     </div>
-
-     <div class="card">
-    <div class="card-inner">
-      
-      <!-- Cara frontal -->
-      <div class="card-front">
-        <img src="img/robin.webp" alt="Batman">
-        <h3>Batman</h3>
-        <button class="info-btn">Info</button>
-      </div>
-
-      <!-- Cara trasera -->
-        <div class="card-back">
-            <h2>Bruce Wayne</h2>
-            <p><strong>Alias:</strong> Batman</p>
-            <p><strong>Descripción:</strong> El Caballero de la Noche, conocido como un vigilante enmascarado que protege Gotham con inteligencia, habilidad y tecnología, impulsado por la tragedia de su pasado.</p>
-            <p><strong>Trajes:</strong> Traje clásico, armadura táctica, traje sigiloso</p>
-            <button class="close-btn">Cerrar</button>
-        </div>
-
-        </div>
-     </div>
-
-     <div class="card">
-    <div class="card-inner">
-      
-      <!-- Cara frontal -->
-      <div class="card-front">
-        <img src="img/robin.webp" alt="Batman">
-        <h3>Batman</h3>
-        <button class="info-btn">Info</button>
-      </div>
-
-      <!-- Cara trasera -->
-        <div class="card-back">
-            <h2>Bruce Wayne</h2>
-            <p><strong>Alias:</strong> Batman</p>
-            <p><strong>Descripción:</strong> El Caballero de la Noche, conocido como un vigilante enmascarado que protege Gotham con inteligencia, habilidad y tecnología, impulsado por la tragedia de su pasado.</p>
-            <p><strong>Trajes:</strong> Traje clásico, armadura táctica, traje sigiloso</p>
-            <button class="close-btn">Cerrar</button>
-        </div>
-
-        </div>
-     </div>
-
-     <div class="card">
-    <div class="card-inner">
-      
-      <!-- Cara frontal -->
-      <div class="card-front">
-        <img src="img/robin.webp" alt="Batman">
-        <h3>Batman</h3>
-        <button class="info-btn">Info</button>
-      </div>
-
-      <!-- Cara trasera -->
-        <div class="card-back">
-            <h2>Bruce Wayne</h2>
-            <p><strong>Alias:</strong> Batman</p>
-            <p><strong>Descripción:</strong> El Caballero de la Noche, conocido como un vigilante enmascarado que protege Gotham con inteligencia, habilidad y tecnología, impulsado por la tragedia de su pasado.</p>
-            <p><strong>Trajes:</strong> Traje clásico, armadura táctica, traje sigiloso</p>
-            <button class="close-btn">Cerrar</button>
-        </div>
-
-        </div>
-     </div>
-
-     <div class="card">
-    <div class="card-inner">
-      
-      <!-- Cara frontal -->
-      <div class="card-front">
-        <img src="img/robin.webp" alt="Batman">
-        <h3>Batman</h3>
-        <button class="info-btn">Info</button>
-      </div>
-
-      <!-- Cara trasera -->
-        <div class="card-back">
-            <h2>Bruce Wayne</h2>
-            <p><strong>Alias:</strong> Batman</p>
-            <p><strong>Descripción:</strong> El Caballero de la Noche, conocido como un vigilante enmascarado que protege Gotham con inteligencia, habilidad y tecnología, impulsado por la tragedia de su pasado.</p>
-            <p><strong>Trajes:</strong> Traje clásico, armadura táctica, traje sigiloso</p>
-            <button class="close-btn">Cerrar</button>
-        </div>
-
-        </div>
-     </div>
-
-     <div class="card">
-    <div class="card-inner">
-      
-      <!-- Cara frontal -->
-      <div class="card-front">
-        <img src="img/robin.webp" alt="Batman">
-        <h3>Batman</h3>
-        <button class="info-btn">Info</button>
-      </div>
-
-      <!-- Cara trasera -->
-        <div class="card-back">
-            <h2>Bruce Wayne</h2>
-            <p><strong>Alias:</strong> Batman</p>
-            <p><strong>Descripción:</strong> El Caballero de la Noche, conocido como un vigilante enmascarado que protege Gotham con inteligencia, habilidad y tecnología, impulsado por la tragedia de su pasado.</p>
-            <p><strong>Trajes:</strong> Traje clásico, armadura táctica, traje sigiloso</p>
-            <button class="close-btn">Cerrar</button>
-        </div>
-
-        </div>
-     </div>
-
-
+      <hero-card
+        imagen="img/robin.webp"
+        alias="Iron Man"
+        nombre="Tony Starck"
+        descripcion="Un genio encerrado en una armadura de titanio y voluntad, convertido en leyenda por su ingenio, no por sus dones. Cada circuito en su traje late con redención, cada vuelo es una declaración de que el futuro pertenece a quienes lo construyen. Sarcástico, brillante e imparable, enfrenta dioses y monstruos armado solo con su mente… y un corazón que nunca se rinde."
+        trajes= " Trajes: Mark I, Mark II, Mark L."
+      ></hero-card>
+      <hero-card
+        imagen="img/robin.webp"
+        alias="Thor"
+        nombre="Thor Odison"
+        descripcion="Dios del trueno y heredero del trueno eterno, empuña un martillo que solo los dignos pueden alzar y desata tormentas con un solo gesto. Nacido en la gloria de los reinos celestiales pero forjado en la lucha por los mortales, es fuerza desatada y honor encarnado. Cuando ruge el cielo y la batalla llama, su poder cae como un rayo… y la victoria retumba con su nombre."
+        trajes= " Trajes: Traje clásico, Ragnarok, Endgame."
+      ></hero-card>
+      <hero-card
+        imagen="img/robin.webp"
+        alias="Spider-Man"
+        nombre="Peter Parker"
+        descripcion="Marcado por una mordida y guiado por una promesa, se desliza entre rascacielos como un fantasma ágil del deber. Cada salto es un riesgo, cada telaraña un acto de fe, pero nunca duda cuando la responsabilidad llama. Tras la máscara hay dolor, humor y humanidad, pero también el corazón de un héroe que siempre se levanta… porque alguien, en algún lugar, lo necesita."
+        trajes= " Trajes: Traje clásico, Homecoming, Into the Spider-Verse."
+      ></hero-card>
+      <hero-card
+        imagen="img/robin.webp"
+        alias="Capitan America"
+        nombre="Steve Rogers"
+        descripcion="Nacido en tiempos de guerra pero hecho símbolo eterno, es el escudo viviente de los ideales que nunca deben caer. Su fuerza va más allá del músculo: está en su valor, su lealtad y su inquebrantable sentido del bien. En el campo de batalla, es la primera línea y la última esperanza, marchando siempre adelante, sin rendirse jamás, al ritmo firme de la justicia."
+        trajes= " Trajes: Traje clásico, The Winter Soldier, Endgame."
+      ></hero-card>
+      <hero-card
+        imagen="img/robin.webp"
+        nombre="Wanda maximoff"
+        alias="Bruja Escarlata"
+        descripcion="Tejedora del caos y portadora de un poder que desafía la realidad misma, su voluntad puede alterar mundos y su dolor, desatar tormentas arcanas. Bruja, guerrera y madre del imposible, camina entre lo místico y lo humano, marcada por tragedias que solo la han hecho más temible. Cuando alza sus manos, la magia tiembla… porque incluso el destino se doblega ante su furia."
+        trajes= " Trajes: Traje clásico, Traje de Avengers, Traje de WandaVision."
+      ></hero-card>
     </section>
 
   </div>
